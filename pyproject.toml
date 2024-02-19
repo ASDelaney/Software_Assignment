@@ -6,12 +6,11 @@ build-backend = "poetry.core.masonry.api"
 name = "nyt_assignment"
 version = "0.1.0"
 description = "Software package for analyzing NYT articles"
-authors = [
-    {name = "Andre Delaney", email = "andre.delaney@gmail.com"},
-]
+authors = ["Andre Delaney <andre.delaney@gmail.com>"]
 dependencies = ["matplotlib", "pyyaml", "requests", "pandas", "wordcloud"]
 requires-python = ">=3.11.0"
 readme = "README.md"
+
 [tool.poetry.metadata]
 license = "MIT"
 
