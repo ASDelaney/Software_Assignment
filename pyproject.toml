@@ -17,6 +17,6 @@ classifiers = [
 ]
 
 [project.scripts]
-nyt_analysis = "nyt_assignment:nyt_analysis"
+nyt_assignment = "nyt_assignment:nyt_assignment"
 
 
