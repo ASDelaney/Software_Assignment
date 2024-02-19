@@ -24,12 +24,14 @@ class Analysis():
 
         self.dataset = None
 
-    def load_data(self) -> None:
+        def load_data(self) -> None:
         try:
-            # Using the API key directly from the environment variable
-            api_key = os.environ.get('NYT_API_KEY')
+            # Loading NYT API key from YAML file
+            with open(self.config['secrets_file']) as f:
+                nyt_secrets = yaml.safe_load(f)
 
             # Retrieving data from NYT API
+            api_key = nyt_secrets['API_key']
             nyt_url = 'https://api.nytimes.com/svc/archive/v1/2019/1.json'
             params = {'api-key': api_key}
             self.dataset = requests.get(nyt_url, params=params).json()
